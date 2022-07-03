@@ -13,11 +13,14 @@ namespace ArraysAndListsExercises2
     {
         static void Main(string[] args)
         {
-            /* My attempt:
+            
             Console.WriteLine("Enter name: ");
             string name = Console.ReadLine();
 
-            string[] nameArray = new string[] {name};
+            char[] nameArray = name.ToCharArray();
+
+            //char[] nameArray = new char[name.Length];
+
             Array.Reverse(nameArray);
 
             //string[] nameArray2 = new string[nameArray.Length];
@@ -27,16 +30,21 @@ namespace ArraysAndListsExercises2
             {
                 Console.WriteLine(n);
             }
-            */
+            
+            string nameArrayReversed = new string(nameArray);
+            Console.WriteLine(nameArrayReversed);
 
             // example below hasn't used any arrays:
 
+            /*
             Console.WriteLine("Enter name: ");
             var name = Console.ReadLine();
             var reversedName = GetReversedName(name);
 
             Console.WriteLine($"Name \"{name}\" became \"{reversedName}\"");
+            */
         }
+        /*
         private static string GetReversedName(string name)
         {
             var list = name.ToList();
@@ -44,5 +52,6 @@ namespace ArraysAndListsExercises2
 
             return string.Join("", list.ToArray());
         }
+        */
     }
 }
